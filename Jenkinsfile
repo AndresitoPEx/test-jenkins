@@ -1,11 +1,7 @@
 pipeline {
-    agent any
+    agent {docker true}
     stages {
-        stage('Check Docker') {
-            steps {
-                sh "docker --version"
-            }
-        }
+        
         stage('Build') {
             steps {
                 echo 'Building the app - Paso 1'
