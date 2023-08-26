@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'python:3.8-slim' 
-            args '-v $HOME:$HOME'  
-        }
-    }
+    agent { dockerfile true }
     stages {
         stage('Build') {
             steps {
