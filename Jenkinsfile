@@ -5,7 +5,7 @@ pipeline{
         stage('Build'){
             steps{
                 echo 'Building the app -Paso 1'
-                sh 'python --version'
+                
             }
         }
         stage('Test'){
