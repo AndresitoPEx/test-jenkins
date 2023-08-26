@@ -1,10 +1,11 @@
 pipeline {
-    agent {
-        docker {
-            image 'python:3.8'
-        }
-    }
+    agent any
     stages {
+        stage('Check Docker') {
+            steps {
+                sh "docker --version"
+            }
+        }
         stage('Build') {
             steps {
                 echo 'Building the app - Paso 1'
