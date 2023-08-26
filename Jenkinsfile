@@ -1,7 +1,11 @@
 pipeline {
-    agent {docker true}
+    agent {
+        docker {
+            image 'python:3.8-slim' 
+            args '-v $HOME:$HOME'  
+        }
+    }
     stages {
-        
         stage('Build') {
             steps {
                 echo 'Building the app - Paso 1'
