@@ -3,18 +3,18 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building the app - Paso 1'
+                echo 'Building the app '
                 sh 'python --version'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing the app - Paso 2'
+                echo 'Testing the app '
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying the app - Paso 3'
+                echo 'Deploying the app '
             }
         }
     }
